@@ -7,6 +7,7 @@
 position: relative;
 display: inline-block;
 overflow: hidden;
+margin: 10px 10px 10px 10px;
 }
 .preview > a {
 display: block;
@@ -28,19 +29,22 @@ transform-origin: top left;
 </head>
 <body>
 <h1>What if you could use a website as its own preview?</h1>
-<p>There has been a proliferation of sites constructing previews of other sites by parsing them, sometimes for a representative image, sometimes for special markup. At the same time, smart websites have been redesigning their layout to be responsive to different screen sizes. Finally, more and more browsing device have a very high dpi (aka Retina™ displays).
+<p>There has been a proliferation of sites constructing previews of other sites by parsing them, sometimes for a representative image, sometimes for special markup. At the same time, smart websites have been redesigning their layout to be responsive to different screen sizes. Finally, more and more browsing device have very high dpi (aka Retina™ displays).
 <p>What if we use the site itself, in an iframe, as a preview? This is a hacky attempt to see if this can work. 
 
 <div class="preview"><a href="http://www.w3.org/conf"><iframe 
  src="http://www.w3.org/conf" ></iframe></a></div>
 <div class="preview"><a href="http://salesforce.com"><iframe 
  src="http://salesforce.com" ></iframe></a></div>
-<div class="preview"><a href=""><iframe 
+<div class="preview"><a href="http://fixpatents.herokuapp.com"><iframe 
  src="http://fixpatents.herokuapp.com" ></iframe></a></div>
-<div class="preview"><a href=""><iframe 
+<div class="preview"><a href="http://hicksdesign.co.uk"><iframe 
  src="http://hicksdesign.co.uk" ></iframe></a></div>
-<div class="preview"><a href=""><iframe 
+<div class="preview"><a href="http://epeus.blogspot.com/2011/12/facebook-twitter-and-google-plus-shun.html"><iframe 
  src="http://epeus.blogspot.com/2011/12/facebook-twitter-and-google-plus-shun.html?m=1" ></iframe></a></div>
-<footer>A quick hack by <a href="mailto:kevinmarks+pap@gmail.com">Kevin Marks</a><p> Thanks to <a href="http://lea.verou.me/">Lea Verou</a> for killing CSS with her brain, code from <a href="http://dabblet.com/">Dabblet</a>, and for <a href="http://leaverou.github.com/prefixfree/">PrefixFree</a>.
+<div class="preview"><a href="http://www.initializr.com"><iframe 
+ src="http://www.initializr.com" ></iframe></a></div>
+ 
+<footer>A quick hack by <a href="mailto:kevinmarks+pap@gmail.com">Kevin Marks</a><p> Thanks to <a href="http://lea.verou.me/">Lea Verou</a> for killing CSS with her brain, for code from <a href="http://dabblet.com/">Dabblet</a>, and for <a href="http://leaverou.github.com/prefixfree/">PrefixFree</a>.
 </body>
 </html>
