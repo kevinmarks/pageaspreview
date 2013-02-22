@@ -4,30 +4,43 @@
 <style> 
 .preview
 {
-transform:scale(.5,.5) translate(-50%,-50%);
--ms-transform:scale(.5,.5) translate(-50%,-50%); /* IE 9 */
--moz-transform:scale(.5,.5) translate(-50%,-50%); /* Firefox */
--webkit-transform:scale(.5,.5) translate(-50%,-50%); /* Safari and Chrome */
--o-transform:scale(.5,.5) translate(-50%,-50%); /* Opera */
-
+position: relative;
+display: inline-block;
+overflow: hidden;
+}
+.preview > a {
+display: block;
+width: 320px;
+height: 240px;
+}
+.preview iframe
+{
+position: absolute;
+top: 0;
+width: 640px;
+height: 480px;
+border: 0;
+transform: scale(.5);
+transform-origin: top left;
 }
 </style>
+<script src="prefixfree.min.js"></script>
 </head>
 <body>
 <h1>What if you could use a website as its own preview?</h1>
 <p>There has been a proliferation of sites constructing previews of other sites by parsing them, sometimes for a representative image, sometimes for special markup. At the same time, smart websites have been redesigning their layout to be responsive to different screen sizes. Finally, more and more browsing device have a very high dpi (aka Retina™ displays).
 <p>What if we use the site itself, in an iframe, as a preview? This is a hacky attempt to see if this can work. 
 
-<div class="preview"><iframe width=640 height=480
- src="http://www.w3.org/conf" ></iframe></div>
-<div class="preview"><iframe width=640 height=480
- src="http://salesforce.com" ></iframe></div>
-<div class="preview"><iframe width=640 height=480
- src="http://fixpatents.herokuapp.com" ></iframe></div>
-<div class="preview"><iframe width=640 height=480
- src="http://hicksdesign.co.uk" ></iframe></div>
-<div class="preview"><iframe width=640 height=480
- src="http://epeus.blogspot.com/2011/12/facebook-twitter-and-google-plus-shun.html?m=1" ></iframe></div>
-
+<div class="preview"><a href="http://www.w3.org/conf"><iframe 
+ src="http://www.w3.org/conf" ></iframe></a></div>
+<div class="preview"><a href="http://salesforce.com"><iframe 
+ src="http://salesforce.com" ></iframe></a></div>
+<div class="preview"><a href=""><iframe 
+ src="http://fixpatents.herokuapp.com" ></iframe></a></div>
+<div class="preview"><a href=""><iframe 
+ src="http://hicksdesign.co.uk" ></iframe></a></div>
+<div class="preview"><a href=""><iframe 
+ src="http://epeus.blogspot.com/2011/12/facebook-twitter-and-google-plus-shun.html?m=1" ></iframe></a></div>
+<footer>A quick hack by <a href="mailto:kevinmarks+pap@gmail.com">Kevin Marks</a><p> Thanks to <a href="http://lea.verou.me/">Lea Verou</a> for killing CSS with her brain, code from <a href="http://dabblet.com/">Dabblet</a>, and for <a href="http://leaverou.github.com/prefixfree/">PrefixFree</a>.
 </body>
 </html>
